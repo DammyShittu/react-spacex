@@ -5,10 +5,6 @@ node_modules
 /.pnp
 .pnp.js
 
-# .eslintrc.json
-# .stylelintrc.json
-# .babelrc
-
 # testing
 /coverage
 
