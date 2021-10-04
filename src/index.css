@@ -10,3 +10,12 @@
   justify-content: flex-start;
   gap: 3%;
 }
+
+.nav-link {
+  text-decoration: none;
+}
+
+.current {
+  text-decoration: underline;
+  color: red;
+}
