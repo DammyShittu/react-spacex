@@ -4,7 +4,7 @@ import Nav from './components/Nav';
 
 const App = () => (
   <>
-  <Nav />
+    <Nav />
   </>
 );
 
