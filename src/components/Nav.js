@@ -9,6 +9,13 @@ const Nav = () => {
       path: '/',
       text: 'Rockets',
     },
+
+    {
+      id: 2,
+      path: '/missions',
+      text: 'Missions',
+    },
+
     {
       id: 3,
       path: '/myprofile',
