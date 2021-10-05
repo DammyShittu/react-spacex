@@ -11,9 +11,11 @@ const SingleRocket = ({
   rocket,
 }) => {
   let status = 'Reserve Rocket';
+  let nameOfClass = 'rocket-reserve-btn';
   if (rocket.reserved) {
     if (rocket.reserved === 'true') {
       status = 'Cancel Reservation';
+      nameOfClass = 'rocket-cancel-btn';
       // return status;
     }
   }
@@ -25,7 +27,7 @@ const SingleRocket = ({
       <div className="rocket-details">
         <h2>{name}</h2>
         <p>{description}</p>
-        <button type="submit" className="rocket-reserve-btn" onClick={() => reserve(id)}>{status}</button>
+        <button type="submit" className={nameOfClass} onClick={() => reserve(id)}>{status}</button>
       </div>
     </div>
   );
