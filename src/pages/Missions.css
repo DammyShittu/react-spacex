@@ -22,10 +22,6 @@ td:nth-child(2) {
   text-align: justify;
 }
 
-th {
-  background-color: none;
-}
-
 .mission-row:nth-child(odd) {
   background-color: lightgray;
 }
