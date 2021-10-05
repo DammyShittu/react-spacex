@@ -1,6 +1,7 @@
 import React from 'react';
 import { useSelector } from 'react-redux';
 import SingleMission from '../components/SingleMission';
+import './Missions.css';
 
 const Missions = () => {
   const missions = useSelector((state) => state.missionsReducer.newMissions);
@@ -8,11 +9,26 @@ const Missions = () => {
   return (
     <>
       <ul>
-        {missions && missions.map((mission) => (
-          <li key={mission.id}>
-            <SingleMission name={mission.name} />
-          </li>
-        ))}
+        <table>
+          <thead>
+            <tr>
+              <th>Mission</th>
+              <th>Description</th>
+              <th>Status</th>
+            </tr>
+          </thead>
+
+          <tbody>
+            {missions && missions.map((mission) => {
+              const { name, id, description } = mission;
+              return (
+                <tr key={id} className="mission-row">
+                  <SingleMission name={name} description={description} />
+                </tr>
+              );
+            })}
+          </tbody>
+        </table>
       </ul>
     </>
   );
