@@ -38,10 +38,17 @@ td:nth-child(4) {
 .member {
   text-transform: uppercase;
   color: #fff;
-  background-color: gray;
   padding: 4px 6px;
   font-size: 13px;
   border-radius: 5px;
+}
+
+.not-active {
+  background-color: gray;
+}
+
+.active {
+  background-color: rgb(86, 177, 86);
 }
 
 .btn {
