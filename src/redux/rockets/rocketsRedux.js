@@ -1,16 +1,6 @@
-// create a redux directory for rocketpage
 const FETCH_DATA = 'my-app/rockets/FETCH';
 
 const initialState = [];
-
-const reducer = (state = initialState, action) => {
-  switch (action.type) {
-    case FETCH_DATA:
-      return action.payload;
-    default:
-      return state;
-  }
-};
 
 const fetchData = (payload) => (
   {
@@ -37,8 +27,16 @@ export const fetchAPI = () => async (dispatch) => {
     };
     return newArr.push(obj);
   });
-  // console.log('Wanted format', newArr);
   dispatch(fetchData(newArr));
+};
+
+const reducer = (state = initialState, action) => {
+  switch (action.type) {
+    case FETCH_DATA:
+      return action.payload;
+    default:
+      return state;
+  }
 };
 
 export default reducer;
