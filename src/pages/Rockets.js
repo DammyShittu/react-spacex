@@ -8,10 +8,12 @@ const Rockets = () => {
   const dispatch = useDispatch();
 
   const reserveRocket = (id) => (
-    (list[id - 1].reserved)
+    (list[id - 1].reserved && list[id - 1].reserved === 'true')
       ? dispatch(cancel(list, id))
       : dispatch(reserve(list, id))
   );
+
+  // list = useSelector((state) => state.rocketsReducer);
   return (
     <>
       <ul>
@@ -23,6 +25,7 @@ const Rockets = () => {
             image={each.flickrImages}
             id={each.id}
             reserve={reserveRocket}
+            rocket={each}
           />
         ))}
       </ul>
