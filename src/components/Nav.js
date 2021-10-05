@@ -10,11 +10,6 @@ const Nav = () => {
       text: 'Rockets',
     },
     {
-      id: 2,
-      path: '/missions',
-      text: 'Missions',
-    },
-    {
       id: 3,
       path: '/myprofile',
       text: 'My Profile',
