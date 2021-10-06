@@ -39,8 +39,7 @@ SingleRocket.propTypes = {
   description: PropTypes.string.isRequired,
   image: PropTypes.string.isRequired,
   reserve: PropTypes.func.isRequired,
-  // eslint-disable-next-line react/forbid-prop-types
-  rocket: PropTypes.object.isRequired,
+  rocket: PropTypes.instanceOf(Object).isRequired,
 };
 
 export default SingleRocket;
