@@ -16,7 +16,6 @@ const SingleRocket = ({
     if (rocket.reserved === 'true') {
       status = 'Cancel Reservation';
       nameOfClass = 'rocket-cancel-btn';
-      // return status;
     }
   }
   return (
