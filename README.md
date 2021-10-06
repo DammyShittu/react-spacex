@@ -3,6 +3,10 @@
 # Space Travelers' Hub
 > Space Travelers' Hub is single-paged application (SPA) with 3 subpages, `Rockets`,`Missions` and `My Profile`. Data for rockets and missions pages was fetched from [rocket_API](https://api.spacexdata.com/v3/rockets) and [mission_API](https://api.spacexdata.com/v3/missions). This project allows user to do rocket reservation and cancellation. It also allows users to join and leave missions. These actions are reflected on My Profile page. Lastly, Kanban Board was used to collaborate for this project.
 
+# Live Server
+
+[Live Link](https://space-hub.netlify.app/)
+
 # Screenshots
 ### Rockets Page
 
