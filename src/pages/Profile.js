@@ -2,12 +2,16 @@ import React from 'react';
 import { useSelector, useDispatch } from 'react-redux';
 import '../styling/profile.css';
 import { leaveMission } from '../redux/missions/missions';
+import { cancel } from '../redux/rockets/rocketsRedux';
 
 const Profile = () => {
   const missions = useSelector((state) => state.missionsReducer.newMissions);
   const list = useSelector((state) => state.rocketsReducer);
   const filteredRockets = list.filter((each) => each.reserved === 'true');
   const dispatch = useDispatch();
+  const leave = (id) => {
+    dispatch(cancel(list, id));
+  };
 
   let filteredMissions;
 
@@ -34,7 +38,7 @@ const Profile = () => {
                     className="btn leave"
                     onClick={() => dispatch(leaveMission(id))}
                   >
-                    Leave Mission
+                    Leave
                   </button>
                 </li>
               );
@@ -53,9 +57,16 @@ const Profile = () => {
           <h2>My Rockets</h2>
           <ul className="profile-lists">
             {filteredRockets.map((reserved) => (
-              <li key={reserved.id} className="list">{reserved.rocketName}</li>
+              <li key={reserved.id} className="list">
+                <h3 className="name">{reserved.rocketName}</h3>
+                <a href={reserved.wikipedia} className="wiki">Read More </a>
+                <button type="submit" className="btn leave" onClick={() => leave(reserved.id)}>Cancel</button>
+              </li>
             ))}
           </ul>
+          {(!filteredRockets.length >= 1)
+            ? <h3 className="no-mission">Please Reserve a Rocket </h3>
+            : null}
         </div>
       </div>
     </section>
