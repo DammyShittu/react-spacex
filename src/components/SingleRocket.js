@@ -1,6 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import './rocket.css';
+import '../styling/rocket.css';
 
 const SingleRocket = ({
   name,
