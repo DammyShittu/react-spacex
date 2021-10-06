@@ -12,10 +12,12 @@ const SingleRocket = ({
 }) => {
   let status = 'Reserve Rocket';
   let nameOfClass = 'rocket-reserve-btn';
+  // let badge = 'hide'
   if (rocket.reserved) {
     if (rocket.reserved === 'true') {
       status = 'Cancel Reservation';
       nameOfClass = 'rocket-cancel-btn';
+      // badge = 'show';
     }
   }
   return (
@@ -25,7 +27,13 @@ const SingleRocket = ({
       </div>
       <div className="rocket-details">
         <h2>{name}</h2>
-        <p>{description}</p>
+        <div>
+          {/* {(rocket.reserved && rocket.reserved === 'true') ? (<span>Reserved</span>) : null} */}
+          <p>
+            {(rocket.reserved && rocket.reserved === 'true') ? (<span className="reserve-status">Reserved</span>) : null}
+            {description}
+          </p>
+        </div>
         <button type="submit" className={nameOfClass} onClick={() => reserve(id)}>{status}</button>
       </div>
     </div>
