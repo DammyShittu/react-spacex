@@ -20,10 +20,21 @@ const Missions = () => {
 
           <tbody>
             {missions && missions.map((mission) => {
-              const { name, id, description } = mission;
+              const {
+                name,
+                id,
+                description,
+                reserved,
+              } = mission;
+
               return (
                 <tr key={id} className="mission-row">
-                  <SingleMission name={name} description={description} id={id} />
+                  <SingleMission
+                    name={name}
+                    description={description}
+                    id={id}
+                    reserved={reserved}
+                  />
                 </tr>
               );
             })}
