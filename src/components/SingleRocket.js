@@ -31,7 +31,9 @@ const SingleRocket = ({
             {description}
           </p>
         </div>
-        <button type="submit" className={nameOfClass} onClick={() => reserve(id)}>{status}</button>
+        <div className="btn-container">
+          <button type="submit" className={nameOfClass} onClick={() => reserve(id)}>{status}</button>
+        </div>
       </div>
     </div>
   );
