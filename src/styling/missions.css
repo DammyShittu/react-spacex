@@ -1,38 +1,43 @@
+.mission-table {
+  margin: 0;
+  padding: 0;
+  margin-bottom: 30px;
+}
 
-table {
-  width: 95%;
-  margin: 40px auto;
+.mission-row {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
   text-align: center;
-}
-
-table,
-th,
-td {
-  border: 1px solid rgba(201, 179, 179, 0.474);
-  border-collapse: collapse;
-}
-
-th,
-td {
-  padding: 15px 10px;
-}
-
-td:nth-child(2) {
-  width: 70%;
-  text-align: justify;
+  width: 90%;
+  margin: 0 auto;
+  gap: 25px;
+  padding: 20px 15px;
+  border-radius: 8px;
+  margin-top: 50px;
 }
 
 .mission-row:nth-child(odd) {
   background-color: lightgray;
 }
 
-td:nth-child(3),
-td:nth-child(4) {
-  width: 15%;
+.mission-row:nth-child(even) {
+  background-color: #f4f4f4;
+}
+
+.table-head {
+  display: none;
 }
 
 .name {
   font-weight: bold;
+  font-size: 26px;
+}
+
+.descr {
+  font-size: 15px;
+  text-align: justify;
 }
 
 .member {
@@ -76,4 +81,34 @@ td:nth-child(4) {
 .leave:hover {
   background-color: rgb(237, 51, 51);
   color: #fff;
+}
+
+@media all and (min-width: 768px) {
+  table {
+    width: 95%;
+    margin: 40px auto;
+    text-align: center;
+  }
+
+  table,
+  th,
+  td {
+    border: 1px solid rgba(201, 179, 179, 0.474);
+    border-collapse: collapse;
+  }
+
+  th,
+  td {
+    padding: 15px 10px;
+  }
+
+  td:nth-child(2) {
+    width: 70%;
+    text-align: justify;
+  }
+
+  td:nth-child(3),
+  td:nth-child(4) {
+    width: 15%;
+  }
 }

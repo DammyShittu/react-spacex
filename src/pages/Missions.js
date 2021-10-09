@@ -8,10 +8,10 @@ const Missions = () => {
 
   return (
     <>
-      <ul>
+      <ul className="mission-table">
         <table>
           <thead>
-            <tr>
+            <tr className="table-head">
               <th>Mission</th>
               <th>Description</th>
               <th>Status</th>

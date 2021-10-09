@@ -5,7 +5,8 @@
   margin: 2% auto;
 }
 
-.rocket-details > h2, p {
+.rocket-details > h2,
+p {
   text-align: center;
   width: 95%;
   margin-inline: auto;
@@ -13,8 +14,7 @@
 
 .btn-container {
   width: 40%;
-  margin: 2% auto
-
+  margin: 2% auto;
 }
 
 .rocket-cancel-btn,
@@ -48,8 +48,6 @@
   margin-right: 1%;
 }
 
-
-
 @media all and (min-width: 768px) {
   .each-rocket {
     margin-block: 2%;
@@ -58,13 +56,14 @@
     display: flex;
     gap: 2%;
   }
-  
+
   .img-size {
     width: 225px;
     height: 197px;
   }
-  
-  .rocket-details > h2, p {
+
+  .rocket-details > h2,
+  p {
     text-align: left;
     width: auto;
   }
@@ -73,7 +72,7 @@
     width: 100%;
     margin: 0 0;
   }
-  
+
   .rocket-reserve-btn,
   .rocket-cancel-btn {
     width: 219px;
@@ -89,12 +88,12 @@
     background-color: blue;
     color: white;
   }
-  
+
   .rocket-cancel-btn {
     background-color: gainsboro;
     color: black;
   }
-  
+
   .reserve-status {
     padding-inline: 1%;
     padding-block: 2px;
